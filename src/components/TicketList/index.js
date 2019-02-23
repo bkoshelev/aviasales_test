@@ -1,1 +1,2 @@
-export TicketList from "./TicketList";
+import TicketList from "./TicketList";
+export default TicketList;
