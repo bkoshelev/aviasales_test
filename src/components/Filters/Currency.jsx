@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import { styled } from 'linaria/react';
 
 const StyledCurrency = styled.div`
   width: 100%;

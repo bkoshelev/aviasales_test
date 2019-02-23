@@ -1,5 +1,5 @@
 import React, { Suspense} from "react";
-import styled from "styled-components";
+import { styled } from 'linaria/react';
 
 const StyledAirLineLogo = styled.div`
   width: 100%;

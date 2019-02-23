@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from 'linaria/react';
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import { Provider } from "react-redux";
 

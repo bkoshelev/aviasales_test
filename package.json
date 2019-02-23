@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/grom194/aviasales_test#readme",
   "dependencies": {
-    "astroturf": "^0.8.5",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "linaria": "^1.1.4",
+    "mini-css-extract-plugin": "^0.5.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.0",

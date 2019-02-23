@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -19,8 +20,27 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           "babel-loader?cacheDirectory",
+          {
+            loader: 'linaria/loader',
+            options: {
+              // sourceMap: process.env.NODE_ENV !== 'production',
+            },
+          }
         ],
-      }],
+        
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
+          },
+        ],
+      },],
     },
     resolve: {
         extensions: [".js", ".jsx"],
@@ -28,5 +48,8 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     template: './static/index.html',
     inject: 'body',
+  }),
+  new MiniCssExtractPlugin({
+    filename: 'styles.css',
   })]
 };
