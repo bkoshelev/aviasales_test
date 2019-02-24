@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "linaria/stylelint-config",
+  ],
+  "plugins": [
+    "stylelint-no-unsupported-browser-features"
+  ],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [true, {
+      "severity": "warning"
+    }]
+  }
+}

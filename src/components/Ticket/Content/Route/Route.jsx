@@ -20,7 +20,7 @@ import {
 
 const StyledRoute = styled.div`
   display: grid;
-  grid-template: auto / 1fr 1fr 1fr;
+  grid-template: auto / minmax(min-content,1fr) minmax(min-content,1fr) minmax(min-content,1fr);
 `;
 const Route = ({
     originName,

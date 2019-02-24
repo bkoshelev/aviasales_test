@@ -6,11 +6,16 @@ import Ticket from "./../Ticket";
 import { getTickets, getTicketsIds } from "./reducer";
 
 const StyledTicketList = styled.div`
-  display: grid;
   grid-auto-rows: 100px;
-
-  grid-area: tickets;
+  width: 729px;
   grid-row-gap: 20px;
+  display: inline-block;
+  vertical-align: top;
+
+  @media (max-width: 1030px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 `;
 
 

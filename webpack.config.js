@@ -1,12 +1,13 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   devServer: {
     host: "0.0.0.0",
-    port: 8080,
+    port: 8081,
     historyApiFallback: true,
   },
   output: {
@@ -49,7 +50,13 @@ module.exports = {
     template: './static/index.html',
     inject: 'body',
   }),
+  new StyleLintPlugin({
+    configFile: '.stylelintrc',
+    context: 'src',
+    failOnError: true, files: ["**/*.{css, jsx}"]
+  }),
   new MiniCssExtractPlugin({
     filename: 'styles.css',
-  })]
+  }), 
+],
 };

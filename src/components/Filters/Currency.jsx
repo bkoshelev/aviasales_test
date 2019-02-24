@@ -23,14 +23,14 @@ const CurrencyHeader = styled.div`
   position: relative;
 `;
 
-const CurrencyItem = styled.div`
+const CurrencyItem = styled.button`
 border: 1px solid #dce2e4;
-display: grid;
+display: flex;
 align-items: center;
 justify-items: center;
 color: #2196f3;
 &:hover {
-    border-color: #2196f3
+    border-color: #2196f3;
     background-color: #e5f9ff;
     cursor: pointer;
 }
